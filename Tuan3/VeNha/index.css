@@ -82,5 +82,7 @@ body{
   transform: rotate(25deg);
 }
 .card h3{ margin:0 0 8px; font-size:18px; font-weight:700; color:#222; }
-.card a{
-  display:inline-block; margin-top:4px; padding:10px 12px; border-ra
+.card a
+{
+  display:inline-block; margin-top:4px; padding:10px 12px;
+}
