@@ -1,0 +1,50 @@
+
+.best-shared{
+  text-align: center;
+  padding: 18px 18px;
+  font-family: sans-serif;
+}
+
+.best-shared .logo img{
+  display: block;
+  width: 200px;     
+  margin: 0 auto 8px;
+}
+
+.best-shared h2{
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 300;
+  margin: 8px 0 14px;
+}
+.best-shared h2 strong{
+  color: #55bff1; 
+  font-weight: 700;
+}
+
+.best-shared .lead-text{
+  color: #555;
+  font-size: 20px;
+  max-width: 920px;
+  margin: 0 30px 360x;
+}
+
+
+.best-shared .btn-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center;
+  gap: 30px;
+}
+.best-shared .btn-list a{
+  text-decoration: none; 
+  display: inline-block;
+  background: #2f2f2f;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+

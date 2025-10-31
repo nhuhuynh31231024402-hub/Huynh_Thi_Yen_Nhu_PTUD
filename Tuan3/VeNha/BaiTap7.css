@@ -1,0 +1,39 @@
+
+*{ box-sizing: border-box; }
+
+#wrapper{
+  width: 90%; 
+  max-width: auto;
+  margin: 20px auto;
+  padding: 10px;
+  border: 3px solid #333;
+}
+
+header, nav, main, footer{
+  border: 3px solid #333;
+  padding: 12px;
+}
+
+header{
+  margin-bottom: 12px;
+}
+
+nav{
+  float: left; 
+  width: 25%;
+  min-height: 330px;
+  margin-bottom: 12px; 
+}
+
+main{
+  float: right;
+  width: 73%;
+  min-height: 330px;
+  margin-bottom: 12px; 
+}
+
+footer{
+  clear: both;
+  margin-top: 12px;
+}
+

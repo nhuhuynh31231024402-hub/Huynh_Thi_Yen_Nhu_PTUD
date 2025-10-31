@@ -1,0 +1,52 @@
+.portfolio{
+  text-align: center;
+  background: #f5f5f5;
+  padding: 30px 0 30px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.portfolio h2{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.portfolio h2::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0f9ea8;
+  margin: 12px auto 0;
+  border-radius: 999px;
+}
+.list-tab{
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 25px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+.list-tab li a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+.galerry{
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+.galerry li{
+  flex: 0 0 calc(33.333% - 30px);
+  max-width: 350px;
+}
+.galerry img{
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
