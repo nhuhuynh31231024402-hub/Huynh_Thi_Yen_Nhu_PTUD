@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI face</title>
+    <style>  
+        div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		color: #3079ed; font-weight:bold; font-size:3em;
+		
+		animation-name: text-shadow-multicolor2;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+			
+		/* shorthand
+		animation: text-shadow-multicolor2 1s linear 0s infinite normal forwards;*/
+	}
+	@keyframes text-shadow-multicolor2 {
+			
+		0% {
+			text-shadow:0 0 black, 0 0 red, 0 0 orange,0 0 yellow,0 0 green,0 0 skyblue,0 0 blue,0 0 white;
+			transform:translateX(0) translateY(0);
+		}
+		100% {
+			text-shadow:-1px -1px black,-3px -3px red,-5px -5px orange,-7px -7px yellow,-9px -9px green,-11px -11px skyblue,-13px -13px blue,-15px -15px white;
+			transform:translateX(8px) translateY(8px);
+		}
+	}
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 40%;
+            margin-left: -50px;
+        }
+        .content:first-child{
+            margin-left:50px;
+            margin-top: 100px;
+        }
+        img:hover{
+            transform: scale(1.75);
+        }
+        body{
+        margin:0;
+        display:flex; 
+        flex-direction:column;
+        justify-content:center; 
+        align-items:center; gap:24px;
+        }
+        </style>
+</head>
+<body>
+    <div class='at-container'>
+	<div class='at-item' >UEH</div>
+</div>
+
+    <div class="content">
+        <img src="./img/uifaces-cartoon-avatar.jpg" alt="" class="avatar">
+        <img src="./img/uifaces-human-avatar.jpg" alt="" class="avatar">
+        <img src="./img/uifaces-popular-avatar.jpg" alt="" class="avatar">    
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hieu ung</title>
+    <style>
+        div.at-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+	.at-item {
+		width: 200px;  background-color:#ffe672; 
+		
+		animation-name: shadow-drop-center;
+		animation-duration: 2.2s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+		/* shorthand
+		animation: shadow-drop-center 2.2s linear 0s infinite normal none;*/
+	}
+	@keyframes shadow-drop-center {
+			
+		0% {
+			box-shadow:0 0 0 0 transparent;
+		}
+		100% {
+			box-shadow:0 0 20px 0 rgba(0,0,0,.35);
+		}
+	}
+    </style>
+</head>
+<body>
+    <div class='at-item'>
+            <img width="200" src="https://bit.ueh.edu.vn/wp-content/uploads/2017/06/BIT_logo.png">
+	<div class='at-item' ></div>
+    </div>
+</body>
+</html>
