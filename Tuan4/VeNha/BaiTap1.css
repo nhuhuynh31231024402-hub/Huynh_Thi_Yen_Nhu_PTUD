@@ -1,0 +1,18 @@
+.khoa {
+  background-color: blue;
+  font-size: 20px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 
+    background-color 0.5s,
+    font-size 0.5s,
+    transform 0.5s;
+}
+
+.khoa:hover {
+  background-color: red;
+  font-size: 50px;
+  transform: matrix(1.4, -0.54, 0.54, 1.4, 0, 0);
+}
