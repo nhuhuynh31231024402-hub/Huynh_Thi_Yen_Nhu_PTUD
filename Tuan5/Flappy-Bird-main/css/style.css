@@ -34,7 +34,7 @@ body {
     position: absolute;
     height: 170px;
     width: 60px;
-    background-color: #33cc33;
+    background-color: #94b7e7;
     right: -64px;
     border: 2px solid #000;
 }
@@ -53,12 +53,12 @@ body {
 
 /* Điểm */
 #score {
-    font-size: 100px;
+    font-size: 50px;
     position: absolute;
     width: 100%;
     text-align: center;
     padding: 10px;
-    color: #555;
+    color: #0b0b52;
 }
 
 /* Level */
@@ -67,7 +67,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: #555;
+    color: #ae0606;
     font-weight: bold;
 }
 
@@ -78,7 +78,7 @@ body {
     width: 100%;
     padding: 20px;
     background-color: #fff;
-    color: #555;
+    color: #8f0a0a;
     font-size: 35px;
     border: none;
     cursor: pointer;
@@ -95,26 +95,5 @@ body {
     background-color: transparent;
     border: 0;
     font-size: 30px;
-    color: #555;
-}
-
-/* (tuỳ chọn) skin khác cho chim và ống */
-.bird-type-1 {
-    background: url('../sprites/bird-type-1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.bird-type-2 {
-    background: url('../sprites/bird-type-2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.pole-type-1 {
-    background: url('../sprites/pole-type-1.png');
-}
-
-.pole-type-2 {
-    background: url('../sprites/pole-type-2.png');
+    color: #050754;
 }
