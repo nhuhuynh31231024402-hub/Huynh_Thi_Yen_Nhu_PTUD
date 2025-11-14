@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Commerce - Chi tiết sản phẩm</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- CSS MyKingdom -->
+    <link rel="stylesheet" href="mykingdom.css">
+    <!-- xZoom CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/xzoom/dist/xzoom.css" media="all" />
+    
+</head>
+<body>
+
+<!-- NAVIGATION – giống các trang khác -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#main-navbar"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Logo MyKingdom -->
+            <a class="navbar-brand" href="ecommerce.html">
+                <img src="https://www.mykingdom.com.vn/cdn/shop/files/logo-254x76_1.png?v=1697473116&width=400"
+                     alt="MyKingdom" class="homepage-header-logo">
+            </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="ecommerce.html">Trang chủ</a></li>
+                <li class="active"><a href="#">Sản phẩm</a></li>
+                <li><a href="ecommerce-status.html">Tình trạng đơn hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+
+            <!-- Search desktop -->
+            <form class="navbar-form navbar-left hidden-xs">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                </div>
+                <button type="submit" class="btn btn-default">Tìm</button>
+            </form>
+
+            <!-- Search mobile -->
+            <form class="visible-xs-inline-block" style="margin-top:10px">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi...">
+                </div>
+            </form>
+
+            <!-- Icon cart, user, sign in -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="badge pull-right">4</span>
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                    </a>
+                </li>
+                <li><a href="account.html"><i class="glyphicon glyphicon-user"></i></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Đăng ký</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- MODAL Đăng ký / Sign in -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Đăng ký</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control"
+                               placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Mật khẩu</label>
+                        <input type="password" class="form-control"
+                               placeholder="Password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    <button type="submit"
+                            class="btn btn-primary">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT: CATEGORIES + PRODUCT DETAIL -->
+<div class="container">
+    <div class="row" style="margin-top: 30px;">
+        <!-- CATEGORIES giống ecommerce.html -->
+        <div class="col-sm-4 col-md-3">
+            <h3>Danh mục</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">14</span>
+                    Đồ chơi cho bé
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">8</span>
+                    Búp bê
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">5</span>
+                    Robot
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">8</span>
+                    LEGO
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">7</span>
+                    Board game
+                </li>
+                <li class="list-group-item">
+                    <span class="badge">11</span>
+                    Scooter & Xe chòi chân
+                </li>
+            </ul>
+        </div>
+
+        <!-- PRODUCT DETAIL – theo layout slide 2.2 -->
+        <div class="col-sm-8 col-md-9">
+            <div class="thumbnail">
+                <div class="row">
+                    <!-- BIG & SMALL PICTURE -->
+                    <div class="col-sm-6">
+                        <img class="img-responsive"
+                             src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-lap-rap-xe-van-chuyen-xe-dua-f1-lego-city-60445.png?v=1759285996&width=800"
+                             alt="Đồ Chơi Lắp Ráp Xe Vận Chuyển Xe Đua F1 LEGO CITY 60445"/>
+
+                        <div class="thumbnails row" style="margin-top:10px;">
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-lap-rap-xe-van-chuyen-xe-dua-f1-lego-city-60445.png?v=1759285996&width=400"
+                                         alt="" class="img-thumbnail img-responsive"/>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img src="https://www.mykingdom.com.vn/cdn/shop/files/1_5ac375cb-f41a-43b5-8ea1-85145b9b11fd.jpg?v=1759285996&width=1646"
+                                         alt="" class="img-thumbnail img-responsive"/>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img src="https://www.mykingdom.com.vn/cdn/shop/files/2_de92780d-4173-4b9a-b52a-4df748e68bee.jpg?v=1759285996&width=1646"
+                                         alt="" class="img-thumbnail img-responsive"/>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a href="#">
+                                    <img src="https://www.mykingdom.com.vn/cdn/shop/files/4_dc90807d-bbc9-472f-a951-b75ee3f29618.jpg?v=1759285996&width=1646"
+                                         alt="" class="img-thumbnail img-responsive"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DESCRIPTION + FORM + RATING -->
+                    <div class="col-sm-6">
+                        <!-- 2.2.3 Description -->
+                        <h4 class="pull-right">2.799.000₫</h4>
+                        <h4>
+                            <a href="ecommerce-detail.html">
+                                Đồ Chơi Lắp Ráp Xe Vận Chuyển Xe Đua F1 LEGO CITY 60445
+                            </a>
+                        </h4>
+                        <p>
+                            Bộ LEGO City với chủ đề xe đua F1 giúp bé phát triển tư duy logic,
+                            khả năng lắp ráp và sáng tạo câu chuyện phiêu lưu đường đua.
+                        </p>
+
+                        <!-- 2.2.5 Reviewer summary -->
+                        <div class="description">
+                            <p>
+                                Bộ sản phẩm gồm xe vận chuyển, xe đua F1 và nhiều phụ kiện nhỏ,
+                                chất liệu nhựa ABS an toàn, màu sắc tươi sáng và độ hoàn thiện cao.
+                            </p>
+                        </div>
+
+                        <div class="ratings">
+                            <p class="pull-right">15 đánh giá</p>
+                            <p>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                4.0 / 5
+                            </p>
+                        </div>
+
+                        <!-- 2.2.4 Form – Number, Color, Size -->
+                        <form role="form">
+                            <div class="number form-group">
+                                <label>Số lượng</label>
+                                <input type="number" class="input-sm" id="number" value="1" min="1"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Màu sắc</label>
+                                <select id="color" class="form-control">
+                                    <option name="color">Đỏ</option>
+                                    <option name="color">Xanh dương</option>
+                                    <option name="color">Xanh lá</option>
+                                    <option name="color">Vàng</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Kích cỡ hộp</label>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default">S</button>
+                                    <button type="button" class="btn btn-default">M</button>
+                                    <button type="button" class="btn btn-default">L</button>
+                                    <button type="button" class="btn btn-default">XL</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">
+                                    Liên hệ người bán
+                                </button>
+                                <button type="submit" class="btn btn-success">
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Nút Leave a Review -->
+                        <div class="well">
+                            <div class="text-right">
+                                <a class="btn btn-success">Viết đánh giá</a>
+                            </div>
+                        </div>
+                    </div> <!-- /.col-sm-6 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.thumbnail -->
+
+            <!-- 2.2.6 Comments -->
+            <div id="comments">
+                <h3>Đánh giá từ khách hàng</h3>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        David More
+                        <span class="pull-right">1 ngày trước</span>
+                        <p>From <em>United States</em></p>
+                        <p>
+                            This product was great in terms of quality. I would definitely buy another!
+                        </p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        Lan Anh
+                        <span class="pull-right">3 ngày trước</span>
+                        <p>From <em>Việt Nam</em></p>
+                        <p>
+                            Bộ LEGO lắp ráp khá dễ, bé nhà mình rất thích, chỉ là giá hơi cao một chút.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- 2.2.7 Other products -->
+            <h3>Sản phẩm liên quan</h3>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="https://www.mykingdom.com.vn/cdn/shop/products/C1009_2.jpg?v=1724138591&width=800"
+                             alt="Cờ tỷ phú cơ bản MONOPOLY C1009">
+                        <div class="caption">
+                            <h4 class="pull-right">599.000₫</h4>
+                            <h4>
+                                <a href="ecommerce-detail.html">
+                                    Cờ tỷ phú cơ bản MONOPOLY C1009
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="https://www.mykingdom.com.vn/cdn/shop/files/phong-kham-xinh-xan-cho-pet-yeu-barbie-jfx93_6.jpg?v=1755144292&width=800"
+                             alt="Phòng khám pet Barbie">
+                        <div class="caption">
+                            <h4 class="pull-right">1.499.000₫</h4>
+                            <h4>
+                                <a href="ecommerce-detail.html">
+                                    Phòng khám xinh xắn cho pet yêu BARBIE JFX93
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-nhoi-bong-7-5-gavyn-donkey-squishmallow-sqcr07945_9.jpg?v=1742201876&width=800"
+                             alt="Đồ chơi nhồi bông Gavyn">
+                        <div class="caption">
+                            <h4 class="pull-right">249.000₫</h4>
+                            <h4>
+                                <a href="ecommerce-detail.html">
+                                    Đồ Chơi Nhồi Bông Gavyn – Donkey
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /.col-sm-8 -->
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- xZoom JS -->
+<script type="text/javascript" src="https://unpkg.com/xzoom/dist/xzoom.min.js"></script>
+
+<script>
+    $(function () {
+        // Initialize xZoom cho hình chính + thumbnail
+        $(".xzoom, .xzoom-gallery").xzoom({
+            tint: '#cf112c',    // lớp phủ đỏ MyKingdom
+            Xoffset: 15         // khoảng cách khung zoom với hình
+        });
+    });
+</script>
+
+</body>
+</html>

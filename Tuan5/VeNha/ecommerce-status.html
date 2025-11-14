@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Commerce - Order Status</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- CSS riêng cho MyKingdom -->
+    <link rel="stylesheet" href="mykingdom.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#main-navbar"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Logo MyKingdom -->
+            <a class="navbar-brand" href="ecommerce.html">
+                <img src="https://www.mykingdom.com.vn/cdn/shop/files/logo-254x76_1.png?v=1697473116&width=400"
+                     alt="MyKingdom" class="homepage-header-logo">
+            </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="ecommerce.html">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="ecommerce-status.html">Tình trạng đơn hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+
+            <!-- Search desktop -->
+            <form class="navbar-form navbar-left hidden-xs">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm...">
+                </div>
+                <button type="submit" class="btn btn-default">Tìm</button>
+            </form>
+
+            <!-- Search mobile -->
+            <form class="visible-xs-inline-block" style="margin-top:10px">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tìm kiếm đồ chơi...">
+                </div>
+            </form>
+
+            <!-- Icon cart, user, sign in -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="badge pull-right">4</span>
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                    </a>
+                </li>
+                <li><a href="account.html"><i class="glyphicon glyphicon-user"></i></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Đăng ký</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Sign in</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control"
+                               placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control"
+                               placeholder="Password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            class="btn btn-default"
+                            data-dismiss="modal">Close</button>
+                    <button type="submit"
+                            class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT: Order Status -->
+<div class="container">
+    <div class="row" style="margin-top: 30px;">
+        <!-- MENU TÀI KHOẢN BÊN TRÁI -->
+        <div class="col-sm-4 col-md-3">
+            <h3>Tài khoản của tôi</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="#">Thông tin cá nhân</a>
+                </li>
+                <li class="list-group-item active">
+                    <a href="#" style="color:#fff;">Trạng thái đơn hàng</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Thông báo</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- DANH SÁCH ĐƠN HÀNG BÊN PHẢI -->
+        <div class="col-sm-8 col-md-9">
+            <h3>Trạng thái đơn hàng</h3>
+
+            <!-- Order 1 -->
+            <div class="thumbnail">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-1">
+                        <img class="img-responsive"
+                             src="https://www.mykingdom.com.vn/cdn/shop/files/do-choi-lap-rap-xe-van-chuyen-xe-dua-f1-lego-city-60445.png?v=1759285996&width=400"
+                             alt="LEGO City">
+                    </div>
+                    <div class="col-xs-9 col-sm-4 col-md-4">
+                        <strong>
+                            <a href="ecommerce-detail.html">
+                                LEGO City – Xe Vận Chuyển Xe Đua F1 60445
+                            </a>
+                        </strong><br>
+                        <small>Mã đơn: #MK20241101</small><br>
+                        <small>Ngày đặt: 10/11/2025</small>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 col-md-1 text-center">
+                        SL<br><strong>1</strong>
+                    </div>
+                    <div class="col-xs-8 col-sm-2 col-md-2 text-right">
+                        Thành tiền<br>
+                        <strong>2.799.000₫</strong>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        Trạng thái<br>
+                        <span class="label label-success" style="font-size:12px;">
+                            Đã giao
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        <a href="#">2 tin nhắn</a><br>
+                        <a href="#" class="btn btn-xs btn-default"
+                           style="margin-top:4px;">Chi tiết</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 2 -->
+            <div class="thumbnail">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-1">
+                        <img class="img-responsive"
+                             src="https://www.mykingdom.com.vn/cdn/shop/files/phong-kham-xinh-xan-cho-pet-yeu-barbie-jfx93_6.jpg?v=1755144292&width=400"
+                             alt="Phòng khám pet Barbie">
+                    </div>
+                    <div class="col-xs-9 col-sm-4 col-md-4">
+                        <strong>
+                            <a href="ecommerce-detail.html">
+                                Phòng khám xinh xắn cho pet yêu BARBIE JFX93
+                            </a>
+                        </strong><br>
+                        <small>Mã đơn: #MK20241102</small><br>
+                        <small>Ngày đặt: 12/11/2025</small>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 col-md-1 text-center">
+                        SL<br><strong>1</strong>
+                    </div>
+                    <div class="col-xs-8 col-sm-2 col-md-2 text-right">
+                        Thành tiền<br>
+                        <strong>1.499.000₫</strong>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        Trạng thái<br>
+                        <span class="label label-warning" style="font-size:12px;">
+                            Đang giao
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        <a href="#">1 tin nhắn</a><br>
+                        <a href="#" class="btn btn-xs btn-default"
+                           style="margin-top:4px;">Theo dõi</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 3 -->
+            <div class="thumbnail">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-1">
+                        <img class="img-responsive"
+                             src="https://www.mykingdom.com.vn/cdn/shop/files/RO203M-3-GR-BK_1_89f5a07e-ebdd-4d59-8486-f3beebcdc772.jpg?v=1752452588&width=400"
+                             alt="Scooter Royal Baby">
+                    </div>
+                    <div class="col-xs-9 col-sm-4 col-md-4">
+                        <strong>
+                            <a href="ecommerce-detail.html">
+                                Xe scooter 3 bánh Royal Baby RO203M-3
+                            </a>
+                        </strong><br>
+                        <small>Mã đơn: #MK20241103</small><br>
+                        <small>Ngày đặt: 13/11/2025</small>
+                    </div>
+                    <div class="col-xs-4 col-sm-2 col-md-1 text-center">
+                        SL<br><strong>2</strong>
+                    </div>
+                    <div class="col-xs-8 col-sm-2 col-md-2 text-right">
+                        Thành tiền<br>
+                        <strong>2.598.000₫</strong>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        Trạng thái<br>
+                        <span class="label label-default" style="font-size:12px;">
+                            Chờ xác nhận
+                        </span>
+                    </div>
+                    <div class="col-xs-6 col-sm-2 col-md-2 text-center">
+                        <a href="#">0 tin nhắn</a><br>
+                        <a href="#" class="btn btn-xs btn-danger"
+                           style="margin-top:4px;">Hủy đơn</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /.col-sm-8 -->
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
