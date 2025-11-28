@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Trận chiến bánh mì: Bà Huynh vs Huynh Hoa</title>
+    <link rel="stylesheet" href="BaiTap6.css">
+</head>
+
+<body>
+
+    <h1>Trận chiến bánh mì: Bà Huynh vs Huynh Hoa</h1>
+
+    <div id="battlefield">
+
+        <div id="hero" class="character">
+            <img src="bahuynh.jpg" alt="Bánh mì Bà Huynh">
+            <div class="healthbar">
+                <div id="human-health" class="health"></div>
+            </div>
+            <p>Bánh mì Bà Huynh – Máu: <span id="human-hp">100</span></p>
+        </div>
+
+        <div id="dragon" class="character">
+            <img src="huynhhoa.jpg" alt="Bánh mì Huynh Hoa">
+            <div class="healthbar">
+                <div id="dragon-health" class="health"></div>
+            </div>
+            <p>Bánh mì Huynh Hoa – Máu: <span id="dragon-hp">100</span></p>
+        </div>
+
+    </div>
+
+    <div id="actions">
+        <button onclick="animateHero('attack'); humanAction('attack')">Phun pate</button>
+        <button onclick="animateHero('defend'); humanAction('defend')">Che ổ bánh</button>
+        <button onclick="animateHero('dodge'); humanAction('dodge')">Né đồ chua</button>
+    </div>
+
+    <div id="game-log"></div>
+
+    <script src="BaiTap6.js"></script>
+
+    <script>
+        const hero = document.getElementById("hero");
+        const dragon = document.getElementById("dragon");
+
+        function animateHero(type) {
+            hero.classList.remove("attack", "hit", "dodge", "defend");
+
+            if (type === "attack") {
+                hero.classList.add("attack");
+                setTimeout(() => hero.classList.remove("attack"), 250);
+
+                dragon.classList.add("hit");
+                setTimeout(() => dragon.classList.remove("hit"), 200);
+            }
+
+            if (type === "defend") {
+                hero.classList.add("defend");
+                setTimeout(() => hero.classList.remove("defend"), 300);
+            }
+
+            if (type === "dodge") {
+                hero.classList.add("dodge");
+                setTimeout(() => hero.classList.remove("dodge"), 250);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+ body {
+            background: #f4f1e8;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        #battlefield {
+            width: 900px;
+            height: 360px;
+            margin: 10px auto 20px;
+            position: relative;
+            border: 3px solid #b08d57;
+            background: #fffaf0;
+        }
+
+        .character {
+            width: 260px;
+            position: absolute;
+            bottom: 0;
+            transition: 0.25s;
+        }
+
+        #hero {
+            left: 20px;
+        }
+
+        #dragon {
+            right: 20px;
+        }
+
+        .character img {
+            width: 100%;
+        }
+
+        .healthbar {
+            width: 220px;
+            height: 18px;
+            margin: 5px auto;
+            border: 2px solid #555;
+            background: #eee;
+        }
+
+        .health {
+            width: 100%;
+            height: 100%;
+            background: #e01405;
+            transition: width 0.3s;
+        }
+
+        #game-log {
+            width: 900px;
+            height: 220px;
+            margin: 0 auto 15px;
+            padding: 10px;
+            overflow-y: auto;
+            background: #fff;
+            border: 2px solid #b08d57;
+            text-align: left;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        #actions {
+            margin-bottom: 10px;
+        }
+
+        #actions button {
+            padding: 10px 28px;
+            margin: 0 6px;
+            font-size: 16px;
+            border: 1px solid #b08d57;
+            background: #fffaf0;
+            color: #5d4037;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        #actions button:hover {
+            background: #ffe0b2;
+            transform: translateY(-1px);
+        }
+
+        .attack {
+            transform: translateX(30px);
+        }
+
+        .hit {
+            filter: brightness(0.7);
+        }
+
+        .dodge {
+            transform: translateX(-30px);
+        }
+
+        .defend {
+            filter: drop-shadow(0 0 6px #ff9800);
+        }
