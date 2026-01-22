@@ -1,0 +1,452 @@
+<html lang="vi"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hai Lúa Lab - Dịch Vụ Xét Nghiệm Y Khoa</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Inter', sans-serif; }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 0px; background: transparent; }
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+/* Custom Checkbox/Radio */
+.custom-radio:checked {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+}
+</style></head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+                        <iconify-icon icon="solar:dna-linear" class="text-xl" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <span class="text-base font-semibold tracking-tight text-gray-900">Hai Lúa Lab</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- Dịch vụ xét nghiệm Dropdown -->
+                    <div class="relative group">
+                        <button class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors flex items-center gap-1">
+                            Dịch vụ xét nghiệm
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xs"></iconify-icon>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Chỉ định xét nghiệm</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Đặt lịch xét nghiệm</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Tra cứu kết quả</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Thông tin khách hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Lấy Mẫu Tại Nhà</a>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Về Chúng Tôi</a>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 mr-2">
+                        <iconify-icon icon="solar:user-circle-linear" class="text-lg"></iconify-icon>
+                        Đăng nhập
+                    </a>
+                    <button class="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md">
+                        <iconify-icon icon="solar:magnifer-linear"></iconify-icon>
+                        Tra cứu Kết quả
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white border-b border-gray-200 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-medium mb-6">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    Dịch vụ lấy mẫu tại nhà 24/7
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight leading-tight mb-6">
+                    Chăm sóc sức khỏe chủ động <br>
+                    <span class="text-gray-400">ngay tại ngôi nhà của bạn.</span>
+                </h1>
+                <p class="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
+                    Đặt lịch xét nghiệm nhanh chóng, đội ngũ y tá chuyên nghiệp, kết quả chính xác và bảo mật tuyệt đối trên hệ thống Hai Lúa Lab.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg text-sm font-medium transition-all shadow-sm">
+                        <iconify-icon icon="solar:calendar-add-linear" class="text-lg"></iconify-icon>
+                        Đặt lịch ngay
+                    </button>
+                    <button class="flex items-center justify-center gap-2 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-lg text-sm font-medium transition-all">
+                        <iconify-icon icon="solar:smartphone-linear" class="text-lg"></iconify-icon>
+                        Tư vấn Zalo
+                    </button>
+                </div>
+                
+                <div class="mt-10 flex items-center gap-6 text-sm text-gray-500">
+                    <div class="flex items-center gap-2">
+                        <iconify-icon icon="solar:verified-check-linear" class="text-green-500 text-lg"></iconify-icon>
+                        ISO 15189:2012
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <iconify-icon icon="solar:clock-circle-linear" class="text-blue-500 text-lg"></iconify-icon>
+                        Kết quả trong 2h
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Background Pattern -->
+        <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-gray-50 to-white hidden lg:block">
+            <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#4f46e5 1px, transparent 1px); background-size: 24px 24px;"></div>
+        </div>
+    </div>
+
+    <!-- Quick Booking / Lookup Widget -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+        <div class="bg-white rounded-xl border border-gray-200 shadow-lg p-2 sm:p-4 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+            
+            <!-- Lookup -->
+            <div class="p-4">
+                <h3 class="text-sm font-semibold text-gray-900 flex items-center gap-2 mb-3">
+                    <iconify-icon icon="solar:document-text-linear" class="text-indigo-600"></iconify-icon>
+                    Tra cứu Kết quả
+                </h3>
+                <div class="space-y-3">
+                    <input type="text" placeholder="Mã hồ sơ (VD: HL-2901)" class="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-shadow">
+                    <input type="text" placeholder="Số điện thoại" class="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-shadow">
+                    <button class="w-full bg-indigo-50 text-indigo-700 hover:bg-indigo-100 py-2 rounded-lg text-sm font-medium transition-colors">Xem kết quả</button>
+                </div>
+            </div>
+
+            <!-- Booking Home -->
+            <div class="p-4">
+                <h3 class="text-sm font-semibold text-gray-900 flex items-center gap-2 mb-3">
+                    <iconify-icon icon="solar:home-add-linear" class="text-green-600"></iconify-icon>
+                    Lấy mẫu tại nhà
+                </h3>
+                <p class="text-xs text-gray-500 mb-4">Tiết kiệm thời gian, an toàn, không cần chờ đợi tại bệnh viện.</p>
+                <div class="flex items-center justify-between bg-gray-50 p-3 rounded-lg border border-gray-100 mb-3 cursor-pointer hover:border-green-200 transition-colors">
+                    <div class="text-sm font-medium text-gray-700">Chọn địa chỉ</div>
+                    <iconify-icon icon="solar:map-point-linear" class="text-gray-400"></iconify-icon>
+                </div>
+                <button class="w-full bg-gray-900 text-white hover:bg-gray-800 py-2 rounded-lg text-sm font-medium transition-colors">Đặt lịch hẹn</button>
+            </div>
+
+            <!-- Upload Prescription -->
+            <div class="p-4">
+                <h3 class="text-sm font-semibold text-gray-900 flex items-center gap-2 mb-3">
+                    <iconify-icon icon="solar:camera-linear" class="text-blue-600"></iconify-icon>
+                    Gửi phiếu chỉ định
+                </h3>
+                <p class="text-xs text-gray-500 mb-4">Chụp hình phiếu chỉ định của bác sĩ để nhận báo giá nhanh.</p>
+                <div class="border-2 border-dashed border-gray-200 rounded-lg p-4 text-center hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer group">
+                    <iconify-icon icon="solar:gallery-send-linear" class="text-2xl text-gray-300 group-hover:text-blue-500 mb-1"></iconify-icon>
+                    <div class="text-xs text-gray-500 font-medium">Tải ảnh lên</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Packages -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl font-semibold text-gray-900 tracking-tight">Gói xét nghiệm phổ biến</h2>
+                <p class="text-sm text-gray-500 mt-1">Được thiết kế phù hợp cho từng độ tuổi và nhu cầu.</p>
+            </div>
+            <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
+                Xem tất cả gói <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Package 1 -->
+            <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-indigo-200 transition-all group">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:heart-pulse-linear" class="text-xl"></iconify-icon>
+                </div>
+                <h3 class="font-semibold text-gray-900">Tổng Quát Cơ Bản</h3>
+                <p class="text-xs text-gray-500 mt-1 h-10">Đánh giá chức năng gan, thận, đường máu, mỡ máu cơ bản.</p>
+                <div class="mt-4 flex items-baseline gap-1">
+                    <span class="text-lg font-bold text-gray-900">499.000₫</span>
+                    <span class="text-xs text-gray-400 line-through">650.000₫</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> 12 chỉ số xét nghiệm
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> Tư vấn kết quả online
+                    </div>
+                </div>
+                <button class="mt-4 w-full py-2 rounded-lg border border-indigo-600 text-indigo-600 text-sm font-medium hover:bg-indigo-600 hover:text-white transition-colors">Chọn gói này</button>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-indigo-200 transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">HOT</div>
+                <div class="w-10 h-10 rounded-full bg-pink-50 text-pink-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:user-hand-up-linear" class="text-xl"></iconify-icon>
+                </div>
+                <h3 class="font-semibold text-gray-900">Sàng Lọc Ung Thư</h3>
+                <p class="text-xs text-gray-500 mt-1 h-10">Tầm soát sớm các dấu ấn ung thư gan, phổi, tiêu hóa, vú/buồng trứng.</p>
+                <div class="mt-4 flex items-baseline gap-1">
+                    <span class="text-lg font-bold text-gray-900">1.250.000₫</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> 5 chỉ số Marker ung thư
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> Lấy mẫu tại nhà miễn phí
+                    </div>
+                </div>
+                <button class="mt-4 w-full py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors">Chọn gói này</button>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-indigo-200 transition-all group">
+                <div class="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:leaf-linear" class="text-xl"></iconify-icon>
+                </div>
+                <h3 class="font-semibold text-gray-900">Sức Khỏe Tiền Hôn Nhân</h3>
+                <p class="text-xs text-gray-500 mt-1 h-10">Kiểm tra sức khỏe sinh sản, bệnh truyền nhiễm cho các cặp đôi.</p>
+                <div class="mt-4 flex items-baseline gap-1">
+                    <span class="text-lg font-bold text-gray-900">1.800.000₫</span>
+                    <span class="text-xs text-gray-500">/ cặp đôi</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> 20 chỉ số chuyên sâu
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> Tặng Voucher 200k
+                    </div>
+                </div>
+                <button class="mt-4 w-full py-2 rounded-lg border border-indigo-600 text-indigo-600 text-sm font-medium hover:bg-indigo-600 hover:text-white transition-colors">Chọn gói này</button>
+            </div>
+
+            <!-- Package 4 -->
+            <div class="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-indigo-200 transition-all group">
+                <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:bacteria-linear" class="text-xl"></iconify-icon>
+                </div>
+                <h3 class="font-semibold text-gray-900">Sốt Xuất Huyết / Cúm</h3>
+                <p class="text-xs text-gray-500 mt-1 h-10">Test nhanh và PCR giúp phát hiện sớm nguyên nhân gây sốt.</p>
+                <div class="mt-4 flex items-baseline gap-1">
+                    <span class="text-lg font-bold text-gray-900">350.000₫</span>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 space-y-2">
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> Kết quả sau 45 phút
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-600">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-green-500"></iconify-icon> Phục vụ 24/7
+                    </div>
+                </div>
+                <button class="mt-4 w-full py-2 rounded-lg border border-indigo-600 text-indigo-600 text-sm font-medium hover:bg-indigo-600 hover:text-white transition-colors">Chọn gói này</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Process Steps -->
+    <div class="bg-gray-50 border-y border-gray-200 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl font-semibold text-gray-900 tracking-tight">Quy trình dịch vụ đơn giản</h2>
+                <p class="text-sm text-gray-500 mt-2">Trải nghiệm dịch vụ y tế công nghệ cao, tiện lợi và minh bạch.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connector Line -->
+                <div class="hidden md:block absolute top-6 left-1/8 right-1/8 h-0.5 bg-gray-200 w-3/4 mx-auto z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center shadow-sm mb-4">
+                        <span class="text-indigo-600 font-bold text-lg">1</span>
+                    </div>
+                    <h4 class="font-medium text-gray-900">Đặt lịch</h4>
+                    <p class="text-xs text-gray-500 mt-1 max-w-[200px]">Chọn gói xét nghiệm và thời gian qua Web/App hoặc Hotline.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center shadow-sm mb-4">
+                        <span class="text-indigo-600 font-bold text-lg">2</span>
+                    </div>
+                    <h4 class="font-medium text-gray-900">Lấy mẫu</h4>
+                    <p class="text-xs text-gray-500 mt-1 max-w-[200px]">Nhân viên y tế đến tận nơi lấy mẫu đúng quy trình an toàn.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center shadow-sm mb-4">
+                        <span class="text-indigo-600 font-bold text-lg">3</span>
+                    </div>
+                    <h4 class="font-medium text-gray-900">Phân tích</h4>
+                    <p class="text-xs text-gray-500 mt-1 max-w-[200px]">Mẫu được chuyển về phòng Lab đạt chuẩn ISO/An toàn sinh học.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center shadow-sm mb-4">
+                        <span class="text-indigo-600 font-bold text-lg">4</span>
+                    </div>
+                    <h4 class="font-medium text-gray-900">Nhận kết quả</h4>
+                    <p class="text-xs text-gray-500 mt-1 max-w-[200px]">Nhận thông báo qua SMS/Zalo. Bác sĩ gọi điện tư vấn chi tiết.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ & App Download -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Mobile App Promo -->
+            <div class="bg-gray-900 rounded-2xl p-8 sm:p-12 text-white relative overflow-hidden flex flex-col justify-center">
+                <div class="absolute top-0 right-0 p-32 bg-indigo-600 rounded-full blur-3xl opacity-20 -mr-16 -mt-16"></div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-semibold mb-4">Tải ứng dụng Hai Lúa Lab</h3>
+                    <p class="text-gray-300 text-sm mb-8 max-w-md">Theo dõi lịch sử sức khỏe cả gia đình, đặt lịch nhanh chóng và nhận ưu đãi độc quyền.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="flex items-center gap-2 bg-white text-gray-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-gray-100 transition-colors">
+                            <iconify-icon icon="solar:apple-linear" class="text-xl"></iconify-icon>
+                            App Store
+                        </button>
+                        <button class="flex items-center gap-2 bg-white/10 backdrop-blur text-white border border-white/20 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-white/20 transition-colors">
+                            <iconify-icon icon="solar:android-linear" class="text-xl"></iconify-icon>
+                            Google Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Reviews -->
+            <div class="flex flex-col justify-center">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6">Khách hàng nói gì về chúng tôi</h3>
+                <div class="space-y-4">
+                    <!-- Review 1 -->
+                    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">NA</div>
+                            <div>
+                                <div class="text-sm font-medium text-gray-900">Nguyễn Ngọc Anh</div>
+                                <div class="flex text-yellow-400 text-[10px]">
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 italic">"Dịch vụ lấy mẫu tại nhà rất tiện, bạn y tá nhẹ nhàng, đúng giờ. Kết quả có bản mềm gửi qua Zalo rất nhanh."</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white border border-gray-100 p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-medium text-gray-600">TM</div>
+                            <div>
+                                <div class="text-sm font-medium text-gray-900">Trần Minh</div>
+                                <div class="flex text-yellow-400 text-[10px]">
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                    <iconify-icon icon="solar:star-bold"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 italic">"Giá cả minh bạch, không phát sinh chi phí. Bác sĩ tư vấn rất nhiệt tình sau khi có kết quả."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <iconify-icon icon="solar:dna-linear" class="text-xl text-indigo-600"></iconify-icon>
+                        <span class="font-semibold text-gray-900">Hai Lúa Lab</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed mb-4">
+                        Hệ thống trung tâm xét nghiệm y khoa công nghệ cao. Cam kết chính xác, nhanh chóng và tận tâm.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors"><iconify-icon icon="solar:facebook-linear" class="text-lg"></iconify-icon></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors"><iconify-icon icon="solar:instagram-linear" class="text-lg"></iconify-icon></a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-600 transition-colors"><iconify-icon icon="solar:youtube-linear" class="text-lg"></iconify-icon></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-gray-900 mb-3">Dịch vụ</h4>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li><a href="#" class="hover:text-indigo-600">Xét nghiệm Tổng quát</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Sàng lọc Ung thư</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Xét nghiệm ADN</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Khám sức khỏe Doanh nghiệp</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-gray-900 mb-3">Hỗ trợ khách hàng</h4>
+                    <ul class="space-y-2 text-xs text-gray-500">
+                        <li><a href="#" class="hover:text-indigo-600">Hướng dẫn lấy mẫu</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Tra cứu kết quả</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-indigo-600">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-semibold text-gray-900 mb-3">Liên hệ</h4>
+                    <ul class="space-y-3 text-xs text-gray-500">
+                        <li class="flex items-start gap-2">
+                            <iconify-icon icon="solar:map-point-linear" class="mt-0.5 text-indigo-600"></iconify-icon>
+                            <span>123 Nguyễn Văn Cừ, Q. Ninh Kiều, TP. Cần Thơ</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <iconify-icon icon="solar:phone-linear" class="text-indigo-600"></iconify-icon>
+                            <span>1900 1234</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <iconify-icon icon="solar:letter-linear" class="text-indigo-600"></iconify-icon>
+                            <span>cskh@hailualab.vn</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-400">© 2024 Hai Lúa Lab. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <span class="text-xs text-gray-400">Tiếng Việt</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body></html>
