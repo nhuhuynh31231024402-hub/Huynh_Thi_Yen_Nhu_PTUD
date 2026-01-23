@@ -27,16 +27,35 @@ html { scroll-behavior: smooth; }
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="Home.html" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Trang chủ</a>
+                    <!-- Dịch vụ xét nghiệm Dropdown -->
+                    <div class="relative group">
+                        <button class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors flex items-center gap-1">
+                            Dịch vụ xét nghiệm
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xs"></iconify-icon>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Chỉ định xét nghiệm</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Đặt lịch xét nghiệm</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Tra cứu kết quả</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors">Thông tin khách hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Lấy Mẫu Tại Nhà</a>
                     <a href="#" class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors">Về Chúng Tôi</a>
                 </div>
 
                 <!-- Actions -->
                 <div class="flex items-center gap-3">
-                    <a href="Home.html" class="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900">
-                        <iconify-icon icon="solar:home-linear" class="text-lg"></iconify-icon>
-                        Về trang chủ
+                    <a href="Home.html" class="hidden sm:flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 mr-2">
+                        <iconify-icon icon="solar:user-circle-linear" class="text-lg"></iconify-icon>
+                        Đăng nhập
                     </a>
+                    <button class="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-sm hover:shadow-md">
+                        <iconify-icon icon="solar:magnifer-linear"></iconify-icon>
+                        Tra cứu Kết quả
+                    </button>
                 </div>
             </div>
         </div>
@@ -47,54 +66,32 @@ html { scroll-behavior: smooth; }
         <div class="w-full max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 
-                <!-- Left Side - Branding & Info -->
+                <!-- Left Side - Image & Slogan -->
                 <div class="hidden lg:block">
-                    <div class="bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl p-10 text-white relative overflow-hidden shadow-2xl">
-                        <!-- Decorative Pattern -->
-                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 32px 32px;"></div>
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl opacity-10 -mr-32 -mt-32"></div>
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden relative">
+                        <!-- Clinic Image -->
+                        <div class="aspect-[4/5] relative overflow-hidden bg-gray-100">
+                            <img 
+                                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&q=80" 
+                                alt="Hai Lúa Lab - Phòng khám xét nghiệm"
+                                class="w-full h-full object-cover object-center"
+                                onerror="this.src='https://via.placeholder.com/800x1000/4f46e5/ffffff?text=Hai+Lúa+Lab'"
+                            >
+                        </div>
                         
-                        <div class="relative z-10">
-                            <div class="mb-8">
-                                <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-6">
-                                    <iconify-icon icon="solar:dna-linear" class="text-4xl text-white" stroke-width="1.5"></iconify-icon>
-                                </div>
-                                <h1 class="text-4xl font-semibold mb-4">Hai Lúa Lab</h1>
-                                <p class="text-lg text-indigo-100 leading-relaxed">
-                                    Hệ thống quản lý xét nghiệm y khoa công nghệ cao
+                        <!-- Slogan Section -->
+                        <div class="p-10 bg-white">
+                            <div class="mb-6">
+                                <h1 class="text-3xl font-semibold text-gray-900 mb-3">Hai Lúa Lab</h1>
+                                <p class="text-lg text-gray-600 leading-relaxed">
+                                    Chăm sóc sức khỏe chủ động ngay tại ngôi nhà của bạn
                                 </p>
                             </div>
-
-                            <div class="space-y-6 mt-12">
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <iconify-icon icon="solar:shield-check-linear" class="text-xl"></iconify-icon>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold mb-1">Bảo mật tuyệt đối</h3>
-                                        <p class="text-sm text-indigo-100">Thông tin bệnh nhân được mã hóa và bảo vệ an toàn</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <iconify-icon icon="solar:clock-circle-linear" class="text-xl"></iconify-icon>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold mb-1">Truy cập 24/7</h3>
-                                        <p class="text-sm text-indigo-100">Xem kết quả và quản lý hồ sơ mọi lúc, mọi nơi</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-start gap-4">
-                                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <iconify-icon icon="solar:document-medicine-linear" class="text-xl"></iconify-icon>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-semibold mb-1">Quản lý tập trung</h3>
-                                        <p class="text-sm text-indigo-100">Theo dõi lịch sử xét nghiệm và sức khỏe của bạn</p>
-                                    </div>
-                                </div>
+                            
+                            <!-- Trust Badge -->
+                            <div class="mt-8 flex items-center gap-2 text-xs text-gray-500">
+                                <iconify-icon icon="solar:clock-circle-linear" class="text-blue-500 text-base"></iconify-icon>
+                                <span>Kết quả trong 2h</span>
                             </div>
                         </div>
                     </div>
